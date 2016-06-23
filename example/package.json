@@ -1,0 +1,15 @@
+{
+  "name": "enebular-agent-example",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "update:power:on": "aws iot-data update-thing-shadow --thing-name ${THING_NAME} --payload '{\"state\":{\"desired\":{\"power\":\"on\"}}}' /dev/null",
+    "update:power:off": "aws iot-data update-thing-shadow --thing-name ${THING_NAME} --payload '{\"state\":{\"desired\":{\"power\":\"off\"}}}' /dev/null",
+    "update:flows": "aws iot-data update-thing-shadow --thing-name ${THING_NAME} --payload \"`cat payload.json`\" /dev/null",
+    "start": "enebular-agent-aws-iot run ./node_modules/.bin/node-red -s settings.js"
+  },
+  "dependencies": {
+    "node-red": "^0.13.4",
+    "enebular-agent-aws-iot": "file:../"
+  }
+}
