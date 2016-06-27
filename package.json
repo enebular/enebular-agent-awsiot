@@ -11,7 +11,6 @@
     "start": "node index.js run ./node_modules/.bin/node-red -s ./settings.js"
   },
   "dependencies": {
-    "aws-iot-device-sdk": "^1.0.9",
-    "node-red": "^0.13.4"
+    "aws-iot-device-sdk": "^1.0.9"
   }
 }
