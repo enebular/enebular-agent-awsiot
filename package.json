@@ -1,6 +1,6 @@
 {
   "name": "enebular-agent-aws-iot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "bin": {
     "enebular-agent-aws-iot": "./bin/enebular-agent-aws-iot"
   },
