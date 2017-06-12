@@ -1,10 +1,10 @@
 {
-	"host": "A3G80UFBM2R6AS.iot.us-east-1.amazonaws.com",
+	"host": "A1ZVWBSDU6JMPT.iot.ap-northeast-1.amazonaws.com",
 	"port": 8883,
-	"clientId": "MyEnebularAgent01",
-  "thingName": "MyEnebularAgent01",
+	"clientId": "enebular-test-20160516",
+	"thingName": "enebular-test-20160516",
 	"caCert": "./certs/root-CA.crt",
-	"clientCert": "./certs/certificate.pem.crt",
-	"privateKey": "./certs/private.pem.key",
-	"topic": "process"
+	"clientCert": "./certs/aa2c36d61d-certificate.pem.crt",
+	"privateKey": "./certs/aa2c36d61d-private.pem.key",
+	"topic": "$aws/things/enebular-test-20160516/shadow/update"
 }

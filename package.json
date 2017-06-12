@@ -1,16 +1,29 @@
 {
   "name": "enebular-agent-aws-iot",
-  "version": "1.0.1",
+  "version": "2.0.0",
+  "description": "",
+  "main": "lib/index.js",
   "bin": {
-    "enebular-agent-aws-iot": "./bin/enebular-agent-aws-iot"
+    "enebular-awsiot-agent": "./bin/enebular-awsiot-agent"
   },
   "scripts": {
-    "update:power:on": "aws iot-data update-thing-shadow --thing-name ${THING_NAME} --payload '{\"state\":{\"desired\":{\"power\":\"on\"}}}' /dev/null",
-    "update:power:off": "aws iot-data update-thing-shadow --thing-name ${THING_NAME} --payload '{\"state\":{\"desired\":{\"power\":\"off\"}}}' /dev/null",
-    "update:flows": "aws iot-data update-thing-shadow --thing-name ${THING_NAME} --payload \"`cat payload.json`\" /dev/null",
-    "start": "node index.js run ./node_modules/.bin/node-red -s ./settings.js"
+    "build": "babel src -d lib",
+    "start": "node lib/index.js",
+    "lint": "eslint src"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-es2017": "^6.16.0",
+    "eslint": "^3.12.2"
   },
   "dependencies": {
-    "aws-iot-device-sdk": "^1.0.9"
+    "aws-iot-device-sdk": "^1.0.14",
+    "babel-runtime": "^6.23.0",
+    "enebular-runtime-agent": "enebular/enebular-runtime-agent"
   }
 }

@@ -1,0 +1,7 @@
+{
+  "name": "enebular-agent-dynamic-deps",
+  "version": "0.0.1",
+  "dependencies": {
+    "node-red-contrib-pubnub": "0.0.3"
+  }
+}

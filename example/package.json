@@ -1,15 +1,12 @@
 {
-  "name": "enebular-agent-example",
+  "name": "enebular-awsiot-agent-example",
   "version": "1.0.0",
-  "private": true,
+  "description": "",
   "scripts": {
-    "update:power:on": "aws iot-data update-thing-shadow --thing-name ${THING_NAME} --payload '{\"state\":{\"desired\":{\"power\":\"on\"}}}' /dev/null",
-    "update:power:off": "aws iot-data update-thing-shadow --thing-name ${THING_NAME} --payload '{\"state\":{\"desired\":{\"power\":\"off\"}}}' /dev/null",
-    "update:flows": "aws iot-data update-thing-shadow --thing-name ${THING_NAME} --payload \"`cat payload.json`\" /dev/null",
-    "start": "enebular-agent-aws-iot run ./node_modules/.bin/node-red -s settings.js"
+    "start": "AWSIOT_CONFIG_FILE=./config.json NODE_RED_DIR=./node-red enebular-awsiot-agent"
   },
   "dependencies": {
-    "node-red": "^0.13.4",
-    "enebular-agent-aws-iot": "file:../"
+  	"node-red": "^0.13.4",
+    "enebular-awsiot-agent": "enebular/enebular-awsiot-agent"
   }
 }
