@@ -23,7 +23,7 @@ An agent which controls Node-RED instance and accepts deployment request from en
 
 6. Run `enebular-agent-aws-iot` process with node-red startup command.
 
-    $ ./node_modules/.bin/enebular-agent-aws-iot run ./node_modules/.bin/node-red -s settings.js
+    $ ./node_modules/.bin/enebular-agent-aws-iot run ./node_modules/.bin/node-red -s ./settings.js
 
 ## Thing Attributes
 
